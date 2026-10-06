@@ -43,7 +43,9 @@ test('get product with invalid id should receive code 400', async ({ request }) 
   expect(statusCode).toBe(StatusCodes.BAD_REQUEST)
 })
 
-test('post product with correct mandatory only data should receive code 201', async ({ request }) => {
+test('post product with correct mandatory only data should receive code 201', async ({
+  request,
+}) => {
   // prepare request body with only mandatory fields
   const requestBody = {
     name: 'Orange',
@@ -65,7 +67,7 @@ test('post product with correct mandatory only data should receive code 201', as
   expect(statusCode).toBe(StatusCodes.CREATED)
   // check that body.name is string type
   expect(typeof responseBody.name).toBe('string')
-  expect(responseBody.name).toBe("Orange")
+  expect(responseBody.name).toBe('Orange')
   // check that body.price is number type
   expect(typeof responseBody.price).toBe('number')
   //expect(responseBody.available).toBeFalsy()
