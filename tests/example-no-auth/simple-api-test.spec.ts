@@ -79,7 +79,7 @@ test('post product with correct mandatory only data and quantity should receive 
 }) => {
   // prepare request body with only mandatory fields
 
-  const requestBody = new ProductDTO("Kiwi", "Fruit", 2.39, 25)
+  const requestBody = new ProductDTO('Kiwi', 'Fruit', 2.39, 25)
 
   // Send a POST request to the server
   const response = await request.post('https://shop.tl-academy.ee/api/products', {
@@ -103,9 +103,7 @@ test('post product with correct mandatory only data and quantity should receive 
   //expect(responseBody.available).toBeFalsy()
 })
 
-test('fail to create a product with invalid name should receive code 400', async ({
-  request,
-}) => {
+test('fail to create a product with invalid name should receive code 400', async ({ request }) => {
   // prepare request body with only mandatory fields
 
   const requestBody = new ProductDTO('', 'Fruit', 0, 25)
