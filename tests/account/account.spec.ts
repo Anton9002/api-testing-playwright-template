@@ -18,7 +18,6 @@ test('get account info  with correct id should receive code 200', async ({ reque
   console.log('response body:', responseBody)
   // Check if the response status is 200
   expect(statusCode).toBe(StatusCodes.OK)
-
 })
 
 test('create an account with correct payload should receive code 201', async ({ request }) => {

@@ -24,7 +24,6 @@ test.describe('Authorization flow', () => {
     const orderId = await createOrder(request, token)
     expect(orderId).toBeDefined()
     console.log(orderId)
-
   })
 
   test('should create order and validate order by id', async ({ request }) => {

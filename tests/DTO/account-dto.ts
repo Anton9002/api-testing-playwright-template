@@ -1,5 +1,4 @@
 export class AccountDto {
-
   owner: string
   currency: string
 
